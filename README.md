@@ -34,16 +34,15 @@ The focus is on:
 
 ## Project Structure
 
-├── analyzeWindFarm.m # Evaluates environmental constraints for a site
-├── makePlots.m # Generates a multi-panel environmental summary
-├── lat.csv # Latitude grid
-├── lon.csv # Longitude grid
-├── windSpeedData.csv # Global wind speed model
-├── waveHeightData.csv # Global wave height model
-├── buoyData.csv # Local buoy time-series measurements
-├── UnitTest_analyzeWindFarm.m
-├── UnitTest_makePlots.m
-└── README.md
+    ├── analyzeWindFarm.m       # Evaluates environmental constraints for a site
+    ├── makePlots.m             # Generates a multi-panel environmental summary
+    ├── lat.csv                 # Latitude grid
+    ├── lon.csv                 # Longitude grid
+    ├── windSpeedData.csv       # Global wind speed model
+    ├── waveHeightData.csv      # Global wave height model
+    ├── buoyData.csv            # Local buoy time-series measurements
+    ├── UnitTest_analyzeWindFarm.m
+    ├── UnitTest_makePlots.m
 
 ---
 
@@ -64,31 +63,30 @@ Each constraint is computed independently and returned as a boolean result.
 
 ## Example Usage
 
-% Evaluate environmental feasibility
-[c1, c2, c3, c4, c5] = analyzeWindFarm( ...
-    'windSpeedData.csv', ...
-    'waveHeightData.csv', ...
-    'buoyData.csv', ...
-    3.5, 14.7, ...
-    6.2, 95, ...
-    25);
-
-% Generate environmental summary visualization
-makePlots( ...
-    'windSpeedData.csv', ...
-    'waveHeightData.csv', ...
-    'buoyData.csv', ...
-    3.5, 14.7, ...
-    6.2);
+    % Evaluate environmental feasibility
+    [c1, c2, c3, c4, c5] = analyzeWindFarm( ...
+        'windSpeedData.csv', ...
+        'waveHeightData.csv', ...
+        'buoyData.csv', ...
+        3.5, 14.7, ...
+        6.2, 95, ...
+        25);
+    % Generate environmental summary visualization
+    makePlots( ...
+        'windSpeedData.csv', ...
+        'waveHeightData.csv', ...
+        'buoyData.csv', ...
+        3.5, 14.7, ...
+        6.2); 
     
 ## Example Output
 
-Environmental feasibility results:
-Constraint 1: TRUE
-Constraint 2: TRUE
-Constraint 3: TRUE
-Constraint 4: TRUE
-Constraint 5: FALSE
+    Environmental feasibility results:
+    Constraint 1: TRUE
+    Constraint 2: TRUE
+    Constraint 3: TRUE
+    Constraint 4: TRUE
+    Constraint 5: FALSE
 
 ## Generated File:
 
